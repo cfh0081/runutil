@@ -1,4 +1,4 @@
-module github.com/cfh0081/runutil
+module github.com/cfh0081/runutils
 
 go 1.16
 

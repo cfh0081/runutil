@@ -1,4 +1,4 @@
-package runutil
+package runutils
 
 import (
 	"testing"
@@ -8,7 +8,7 @@ import (
 
 func TestRunFuncName(t *testing.T) {
 
-	expected := `github.com/cfh0081/runutil.TestRunFuncName`
+	expected := `github.com/cfh0081/runutils.TestRunFuncName`
 	name := RunFuncName()
 	assert.Equal(t, expected, name)
 }
