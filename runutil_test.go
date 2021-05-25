@@ -8,7 +8,7 @@ import (
 
 func TestRunFuncName(t *testing.T) {
 
-	name := RunFuncName()
 	expected := `github.com/cfh0081/runutil.TestRunFuncName`
-	assert.Equal(t, name, expected)
+	name := RunFuncName()
+	assert.Equal(t, expected, name)
 }
