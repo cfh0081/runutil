@@ -3,6 +3,7 @@ package runutils
 import (
 	"fmt"
 	"math"
+	"path"
 	"runtime"
 	"time"
 )
@@ -13,6 +14,12 @@ func RunFuncName() string {
 	runtime.Callers(2, pc)
 	f := runtime.FuncForPC(pc[0])
 	return f.Name()
+}
+
+func RunFileAndLine() (info string) {
+	_, name, line, _ := runtime.Caller(1)
+	baseName := path.Base(name)
+	return fmt.Sprintf("%v#%v", baseName, line)
 }
 
 func CurrentTime() string {
